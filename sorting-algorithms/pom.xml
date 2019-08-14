@@ -8,4 +8,11 @@
   <artifactId>sorting-algorithms</artifactId>
   <name>sorting-algorithms</name>
   
+  <dependencies>
+  	<dependency>
+  		<groupId>org.manjunath</groupId>
+  		<artifactId>testing-documentation</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  </dependencies>
 </project>

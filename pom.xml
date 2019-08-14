@@ -38,10 +38,12 @@
 		</plugins>
 
 	</build>
+	
+	
 	<modules>
+		<module>testing-documentation</module>
 		<module>sorting-algorithms</module>
 		<module>searching-algorithms</module>
-		<module>testing-documentation</module>
 	</modules>
 
 
