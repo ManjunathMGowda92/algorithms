@@ -7,4 +7,12 @@
   </parent>
   <artifactId>searching-algorithms</artifactId>
   <name>searching-algorithms</name>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.manjunath</groupId>
+  		<artifactId>testing-documentation</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  </dependencies>
 </project>
