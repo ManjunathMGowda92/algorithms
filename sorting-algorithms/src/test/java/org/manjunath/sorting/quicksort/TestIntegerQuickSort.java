@@ -35,6 +35,27 @@ public class TestIntegerQuickSort {
 		
 		Reporter.log("TestIntegerQuickSort: End of testQuickSortMethod1() Method", true);
 	}
+	
+	@Test(testName = "testQuickSortMethod2", alwaysRun = true)
+	@TestCase(Author = "Manjunath HM", testCaseDescription = "to test the quickSort algorithm for the Integer array", expectedResult = "method should return sorted array")
+	public void testQuickSortMethod2() {
+		Reporter.log("TestIntegerQuickSort: Start of testQuickSortMethod1() Method", true);
+		
+		try {
+			int[] inputArray = { 56, 65, 24, 98, 34, 16, 74, 97, 68 };
+			int[] expectedArray = {16, 24, 34, 56, 65, 68, 74, 97, 98 };
+			
+			Assert.assertEquals(sort.getSortedArray(inputArray), expectedArray);
+		} catch (AssertionError e) {
+			Reporter.log("AssertionError occurred: "+e, true);
+			Assert.assertTrue(false);
+		} catch (Exception e) {
+			Reporter.log("Exception occurred: "+e, true);
+			Assert.assertTrue(false);
+		}
+		
+		Reporter.log("TestIntegerQuickSort: End of testQuickSortMethod1() Method", true);
+	}
 
 	@AfterClass
 	public void doDestroy() {
