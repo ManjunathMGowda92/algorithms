@@ -1,4 +1,4 @@
-package org.manjunath.sorting.linearsort;
+package org.manjunath.sorting.selectionsort;
 
 /**
  * Class <i>IntegerLinearSort</i> follows the Linear Sort Algorithm to sort the
@@ -19,7 +19,7 @@ package org.manjunath.sorting.linearsort;
  * @author Manjunath HM
  *
  */
-public class IntegerLinearSort {
+public class IntegerSelectionSort {
 
 	/**
 	 * Method <i>linearSort()</i> sorts the unsorted into sorted array.
