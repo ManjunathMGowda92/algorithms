@@ -1,18 +1,19 @@
 package org.manjunath.sorting.linearsort;
 
 import org.manjunath.algorithms.testdocumentation.TestCase;
+import org.manjunath.sorting.selectionsort.IntegerSelectionSort;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TestIntegerLinearSort {
-	private IntegerLinearSort sort;
+public class TestIntegerSelectionSort {
+	private IntegerSelectionSort sort;
 
 	@BeforeClass
 	public void doInitialization() {
-		sort = new IntegerLinearSort();
+		sort = new IntegerSelectionSort();
 	}
 
 	@Test(testName = "testLinearSort1()", alwaysRun = true)
