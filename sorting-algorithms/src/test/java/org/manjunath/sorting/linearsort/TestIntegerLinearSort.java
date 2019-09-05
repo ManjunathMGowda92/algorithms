@@ -33,6 +33,25 @@ public class TestIntegerLinearSort {
 		}
 		Reporter.log("TestIntegerLinearSort: End of testLinearSort1() method", true);
 	}
+	
+	@Test(testName = "testLinearSort1()", alwaysRun = true)
+	@TestCase(Author = "Manjunath HM", expectedResult = "array to be sorted", testCaseDescription = "To test the linear sorting algorithm for the given input array")
+	public void testLinearSort2() {
+		Reporter.log("TestIntegerLinearSort: Start of testLinearSort2() method", true);
+		try {
+			int[] inputArray = {64, 81, 24, 13, 55, 33, 92, 67, 46, 12, 87, 43};
+			int[] expectedArray = {12, 13, 24, 33, 43, 46, 55, 64, 67, 81, 87, 92};
+
+			Assert.assertEquals(sort.getSortedArray(inputArray), expectedArray);
+		} catch (AssertionError e) {
+			Reporter.log("AssertionError occurred: " + e, true);
+			Assert.assertTrue(false);
+		} catch (Exception e) {
+			Reporter.log("Exception occurred: " + e, true);
+			Assert.assertTrue(false);
+		}
+		Reporter.log("TestIntegerLinearSort: End of testLinearSort2() method", true);
+	}
 
 	@AfterClass
 	public void doDestroy() {
