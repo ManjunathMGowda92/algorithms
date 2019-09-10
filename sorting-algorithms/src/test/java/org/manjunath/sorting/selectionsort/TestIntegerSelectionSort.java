@@ -1,4 +1,4 @@
-package org.manjunath.sorting.linearsort;
+package org.manjunath.sorting.selectionsort;
 
 import org.manjunath.algorithms.testdocumentation.TestCase;
 import org.manjunath.sorting.selectionsort.IntegerSelectionSort;
