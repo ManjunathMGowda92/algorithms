@@ -1,16 +1,16 @@
 package org.manjunath.sorting.selectionsort;
 
 /**
- * Class <i>IntegerSelectionSort</i> follows the Linear Sort Algorithm to sort the
- * array of Integers.
+ * Class <i>CharacterSelectionSort</i> follows the Linear Sort Algorithm to sort
+ * the array of Characters.
  * 
  * <p>
  * For Example: <blockquote>
  * 
  * <pre>
- * input Array : {5, 8, 2, 9, 1, 0, 6}
+ * input Array : {'c', 'a', 'e', 'k', 'y', 'd', 's'}
  * 
- * Then after sorting the output array is : {0, 1, 2, 5, 6, 8, 9}
+ * Then after sorting the output array is : {'a', 'c', 'd', 'e', 'k', 's', 'y'}
  * </pre>
  * 
  * </blockquote>
@@ -19,7 +19,7 @@ package org.manjunath.sorting.selectionsort;
  * @author Manjunath HM
  *
  */
-public class IntegerSelectionSort {
+public class CharacterSelectionSort {
 
 	/**
 	 * Method <i>linearSort()</i> sorts the unsorted into sorted array.
@@ -38,19 +38,17 @@ public class IntegerSelectionSort {
 	 * @param arr
 	 *            Unsorted Input Array
 	 */
-	private void linearSort(int[] arr) {
-
+	private void selectionSort(char[] arr) {
 		int n = arr.length;
 
 		for (int i = 0; i < n - 1; i++) {
-
-			int min = arr[i];
+			char min = arr[i];
 
 			for (int j = i + 1; j < n; j++) {
 				if (arr[j] < min) {
 					min = arr[j];
 
-					int temp = arr[j];
+					char temp = arr[j];
 					arr[j] = arr[i];
 					arr[i] = temp;
 				}
@@ -66,8 +64,8 @@ public class IntegerSelectionSort {
 	 *            Unsorted array
 	 * @return Sorted Array
 	 */
-	public int[] getSortedArray(int[] arr) {
-		linearSort(arr);
+	public char[] getSortedArray(char[] arr) {
+		selectionSort(arr);
 
 		return arr;
 	}
