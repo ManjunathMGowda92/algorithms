@@ -1,16 +1,16 @@
 package org.manjunath.sorting.selectionsort;
 
 /**
- * Class <i>CharacterSelectionSort</i> follows the Linear Sort Algorithm to sort
- * the array of Characters.
+ * Class <i>StringSelectionSort</i> follows the Linear Sort Algorithm to sort
+ * the array of Strings.
  * 
  * <p>
  * For Example: <blockquote>
  * 
  * <pre>
- * input Array : {'c', 'a', 'e', 'k', 'y', 'd', 's'}
+ * input Array : {"raju", "ravi", "ranga", "rama", "rajesh", "reddy"}
  * 
- * Then after sorting the output array is : {'a', 'c', 'd', 'e', 'k', 's', 'y'}
+ * Then after sorting, the output array is : {"rajesh", "raju", "rama", "ranga", "ravi", "reddy"}
  * </pre>
  * 
  * </blockquote>
@@ -19,12 +19,12 @@ package org.manjunath.sorting.selectionsort;
  * @author Manjunath HM
  *
  */
-public class CharacterSelectionSort {
+public class StringSelectionSort {
 
 	/**
 	 * Method <i>selectionSort()</i> sorts the unsorted array into sorted array.
 	 * <p>
-	 * Linear sort algorithm sorts an array by repeatedly finding the minimum
+	 * Selection sort algorithm sorts an array by repeatedly finding the minimum
 	 * element. In each iteration the lowest element of array sorts into the
 	 * respective index of array where the element can be placed after sorting
 	 * </p>
@@ -38,24 +38,24 @@ public class CharacterSelectionSort {
 	 * @param arr
 	 *            Unsorted Input Array
 	 */
-	private void selectionSort(char[] arr) {
+	private void selectionSort(String[] arr) {
 		int n = arr.length;
 
 		for (int i = 0; i < n - 1; i++) {
-			char min = arr[i];
+			String min = arr[i];
 
 			for (int j = i + 1; j < n; j++) {
-				if (arr[j] < min) {
+				if (arr[j].compareTo(min) < 0) {
 					min = arr[j];
 
-					char temp = arr[j];
+					String temp = arr[j];
 					arr[j] = arr[i];
 					arr[i] = temp;
 				}
 			}
 		}
 	}
-
+	
 	/**
 	 * Method <i> getSortedArray</i> just call the selectionSort method and returns
 	 * the sorted array
@@ -64,7 +64,7 @@ public class CharacterSelectionSort {
 	 *            Unsorted array
 	 * @return Sorted Array
 	 */
-	public char[] getSortedArray(char[] arr) {
+	public String[] getSortedArray(String[] arr) {
 		selectionSort(arr);
 
 		return arr;
