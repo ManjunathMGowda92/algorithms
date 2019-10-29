@@ -56,6 +56,12 @@ public class CharacterSelectionSort {
 		}
 	}
 	
+	/**
+	 * Method printArray is used to print the array.
+	 * 
+	 * @param array
+	 *            Input Array
+	 */
 	private void printArray(char[] array) {
 		System.out.print("{ ");
 		for (int i = 0; i < array.length; i++) {
