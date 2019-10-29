@@ -57,6 +57,23 @@ public class IntegerSelectionSort {
 			}
 		}
 	}
+	
+	/**
+	 * Method printArray is used to print the array.
+	 * 
+	 * @param array
+	 *            Input Array
+	 */
+	private void printArray(int[] array) {
+		System.out.print("{ ");
+		for (int i = 0; i < array.length; i++) {
+			if (i == array.length -1)
+				System.out.print(array[i] + " }");
+			else
+				System.out.print(array[i] + ", ");
+		}
+		System.out.println();
+	}
 
 	/**
 	 * Method <i> getSortedArray</i> just call the linearSort method and returns
@@ -67,7 +84,13 @@ public class IntegerSelectionSort {
 	 * @return Sorted Array
 	 */
 	public int[] getSortedArray(int[] arr) {
+		System.out.println("Array before Sorting: ");
+		printArray(arr);
+		
 		linearSort(arr);
+		
+		System.out.println("Array after Sorting: ");
+		printArray(arr);
 
 		return arr;
 	}
