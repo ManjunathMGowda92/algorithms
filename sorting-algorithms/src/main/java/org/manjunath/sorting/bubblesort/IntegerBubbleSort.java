@@ -28,7 +28,7 @@ public class IntegerBubbleSort {
 	 *            Unsorted array
 	 * @return Sorted Array
 	 */
-	public void getSortedArray(int[] array) {
+	public int[] getSortedArray(int[] array) {
 		System.out.println("Array before Sorting: ");
 		printArray(array);
 
@@ -36,6 +36,8 @@ public class IntegerBubbleSort {
 
 		System.out.println("Array after Sorting: ");
 		printArray(array);
+		
+		return array;
 	}
 
 	/**
