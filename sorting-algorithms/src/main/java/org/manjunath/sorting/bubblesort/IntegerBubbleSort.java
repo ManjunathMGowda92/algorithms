@@ -99,6 +99,7 @@ public class IntegerBubbleSort {
 	 * @param array
 	 */
 	private void printArray(int[] array) {
+		System.out.println();
 		System.out.print("{ ");
 		for (int i = 0; i < array.length; i++) {
 			if (i == array.length - 1)
