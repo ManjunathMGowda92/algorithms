@@ -55,6 +55,17 @@ public class CharacterSelectionSort {
 			}
 		}
 	}
+	
+	private void printArray(char[] array) {
+		System.out.print("{ ");
+		for (int i = 0; i < array.length; i++) {
+			if (i == array.length -1)
+				System.out.print(array[i] + " }");
+			else
+				System.out.print(array[i] + ", ");
+		}
+		System.out.println();
+	}
 
 	/**
 	 * Method <i> getSortedArray</i> just call the selectionSort method and returns
@@ -65,7 +76,13 @@ public class CharacterSelectionSort {
 	 * @return Sorted Array
 	 */
 	public char[] getSortedArray(char[] arr) {
+		System.out.println("Array before Sorting: ");
+		printArray(arr);
+		
 		selectionSort(arr);
+		
+		System.out.println("Array after Sorting: ");
+		printArray(arr);
 
 		return arr;
 	}
